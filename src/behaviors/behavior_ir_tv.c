@@ -24,7 +24,7 @@ LOG_MODULE_REGISTER(behavior_ir_tv, CONFIG_ZMK_LOG_LEVEL);
 #define IR_DUTY_CYCLE_PCT  33
 #define IR_FRAME_MAX 98
 
-static const struct pwm_dt_spec ir_pwm = PWM_DT_SPEC_GET(DT_NODELABEL(pwm0));
+static const struct pwm_dt_spec ir_pwm = PWM_DT_SPEC_GET(DT_NODELABEL(pwm_ir));
 
 static int build_panasonic_frame(uint32_t address, uint32_t command,
                                    uint32_t *out, size_t out_max) {
