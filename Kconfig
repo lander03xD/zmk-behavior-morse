@@ -17,4 +17,5 @@ config ZMK_BEHAVIOR_IR_TV
     bool
     default y
     depends on DT_HAS_ZMK_BEHAVIOR_IR_TV_ENABLED
+    select PWM
 
