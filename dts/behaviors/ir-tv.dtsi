@@ -10,13 +10,13 @@
 
 / {
     behaviors {
-#if ZMK_BEHAVIOR_OMIT(IR-TV)
+#if ZMK_BEHAVIOR_OMIT(IR_TV)
         /omit-if-no-ref/
 #endif
-        noise: noise_gen {
+        ir_tv: ir_tv {
             compatible = "zmk,behavior-ir-tv";
             #binding-cells = <0>;
-            display-name = "ir-tv";
+            display-name = "ir_tv";
         };
     };
 };
