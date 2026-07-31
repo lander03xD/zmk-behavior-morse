@@ -64,15 +64,16 @@ uint32_t layout_mapping(uint32_t from_layout[], uint32_t to_layout[], uint32_t h
     for (size_t i = 0; i < 26 ; i++){
         if(from_layout[i] == hid_usage){
             return to_layout[i];
-        }
-    }
-}
+        };
+    };
+    return hid_usage;
+};
 
 uint32_t dvorak_to_qwerty(uint32_t hid_usage){
-    layout_mapping(layout_dvorak, layout_qwerty, hid_usage);
-}
+    return layout_mapping(layout_dvorak, layout_qwerty, hid_usage);
+};
 
 uint32_t qwerty_to_dvorak(uint32_t hid_usage){
-    layout_mapping(layout_qwerty, layout_dvorak, hid_usage);
-}
+    return layout_mapping(layout_qwerty, layout_dvorak, hid_usage);
+};
 

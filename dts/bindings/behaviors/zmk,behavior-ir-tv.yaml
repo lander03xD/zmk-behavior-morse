@@ -1,0 +1,9 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: IR Tv Power Behavior
+
+compatible: "zmk,behavior-ir-tv"
+
+include: zero_param.yaml # Additional parameters
+
