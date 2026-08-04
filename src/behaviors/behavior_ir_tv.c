@@ -74,6 +74,7 @@ static int send_ir_sequence(const uint32_t *seq, size_t len) {
 
 static int behavior_ir_tv_binding_pressed(struct zmk_behavior_binding *binding,
                                                   struct zmk_behavior_binding_event event) {
+    LOG_DBG("IR key pressed");
     uint32_t frame[IR_FRAME_MAX];
     int len = build_panasonic_frame(PANA_ADDRESS, PANA_POWER_CMD, frame, IR_FRAME_MAX);
     if (len < 0) {
@@ -81,6 +82,7 @@ static int behavior_ir_tv_binding_pressed(struct zmk_behavior_binding *binding,
         return -1;
     }
     return send_ir_sequence(frame, (size_t)len);
+    LOG_DBG("IR sequence sent");
 }
 
 static int behavior_ir_tv_binding_released(struct zmk_behavior_binding *binding,
